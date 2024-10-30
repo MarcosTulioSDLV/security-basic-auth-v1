@@ -1,9 +1,10 @@
-# Security JWT V1 System Rest API
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![SpringSecurity](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink)
+# Security Basic Auth V1 System Rest API
 
-I developed a Rest API to manage products, built by using **Spring Boot, Java, and MySQL as the Database**, providing CRUD (Create, Read, Update, Delete) operations with authentication control enabled through **Spring Security and JWT tokens**. This API allows storing product information, such as: product code, name, price, country, and creation date. Storing user information such as username and password is also required to enable security.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![SpringSecurity](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white)
 
-I used some libraries for this Rest API such **Spring Web, Spring Data JPA, Validation, ModelMapper, MySQL Driver, Spring Security and java-jwt**. 
+I developed a Rest API to manage products, built by using **Spring Boot, Java, and MySQL as the Database**, providing CRUD (Create, Read, Update, Delete) operations with basic authentication enabled through **Spring Security**. This API allows storing product information, such as: product code, name, price, country, and creation date. Storing user information such as username and password is also required to enable security.
+
+I used some libraries for this Rest API such **Spring Web, Spring Data JPA, Validation, ModelMapper, MySQL Driver and Spring Security**. 
 
 ## Authentication
 The API uses Spring Security for authentication control. The following roles are available:
@@ -12,7 +13,7 @@ The API uses Spring Security for authentication control. The following roles are
 USER -> Standard user role only for basic product operations (get available products).
 ADMIN -> Admin role for advanced product operations (registration, updates, or deletions). In addition to product operations, this role allows other actions, such as getting and registering users.
 ```
-Users can have multiple roles simultaneously, enabling them to perform both aa and advanced product operations. To access protected endpoints, the appropriate authentication credentials must be provided in the request header.
+Users can have multiple roles simultaneously, enabling them to perform both basic and advanced product operations. To access protected endpoints, the appropriate authentication credentials must be provided in the request header.
 
 ## Database Initialization with Default Data
 For this project, default users and products have been created for quick testing using the scheme.sql and data.sql files. Additionally, endpoints are available to registering new users, logging in, and subsequently adding new products. The default users were created with the following credentials:
@@ -42,7 +43,7 @@ DELETE	/api/products/{id}
 ## Database Config
 For this API, the MySQL Database was used with the following configuration properties: 
 
-- Database name: security_jwt_v1_db
+- Database name: security_basic_auth_v1_db
 - Username: root
 - Password:
 
@@ -62,5 +63,4 @@ This Rest API was built with:
 - Java version: 17
 
 ## System Class Diagram
-![SecurityJwtV1Diagram](https://github.com/user-attachments/assets/b2764789-35bc-4ee7-9933-b6cf7d8e375b)
-
+![SecurityBasicAuthV1Diagram](https://github.com/user-attachments/assets/cc24bb2b-9916-4359-8649-e22a00af5385)
