@@ -10,7 +10,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity //comment?
+@EnableWebSecurity
 public class SecurityConfig {
 
     @Bean
